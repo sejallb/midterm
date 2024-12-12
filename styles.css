@@ -75,6 +75,10 @@ h2 {
     margin-bottom: 5px; 
 }
 
+p {
+    line-height: 1.8;
+}
+
 .rating-location {
     font-size: 1.2em; 
     margin-bottom: 10px; 
@@ -112,6 +116,96 @@ h2 {
     flex: 2;
     padding: 1rem;
 }
+#favorites {
+    border: 2px solid #000; 
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+/* Carousel container */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory; 
+    justify-content: start; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; 
+}
+
+/* Carousel Item */
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px;
+    max-width: 400px; 
+    border: 1px solid #000; 
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.8;
+}
+
+.restaurant-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.carousel-item h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-item .rating-location {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.carousel-item p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2;
+    color: #000;
+}
+
+.carousel-item a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel {
+        gap: 1rem;
+    }
+
+    .carousel-item {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .restaurant-img {
+        height: 250px; 
+    }
+}
+
+
 
 footer {
     text-align: center;
@@ -123,4 +217,98 @@ footer {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* Weather Section */
+#weather-recommendations {
+    margin: 2rem 1rem;
+}
+
+#weather-container {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+#weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.weather-icon {
+    width: 60px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+#weather-status {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#location {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Restaurant Recommendation */
+#recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.recommendation {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recommendation h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.recommendation p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recommendation a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #weather-status {
+        font-size: 2.5rem;
+    }
+
+    #location {
+        font-size: 1.2rem;
+    }
+
+    .recommendation {
+        width: 90%;
+    }
 }
